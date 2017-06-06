@@ -13,7 +13,7 @@ node {
   
       //  sh 'app = docker.build("getintodevops/hellonode") '
         
-        app = docker.build("getintodevops/hellonode")
+        sh 'docker.build("getintodevops/hellonode") '
       
     }
 
