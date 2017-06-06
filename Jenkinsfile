@@ -4,8 +4,6 @@ node {
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
         
-        sh returnStdout: true, script: 'yum install docker '
-
         checkout scm
     }
 
@@ -13,7 +11,8 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("anuj-saxena-git/DockerExample")
+     //   app = docker.build("anuj-saxena-git/DockerExample")
+        app = bat 'docker.build("anuj-saxena-git/DockerExample")'
     }
 
     stage('Test image') {
