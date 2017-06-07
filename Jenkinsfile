@@ -12,7 +12,7 @@ node {
          * docker build on the command line */
   
       //  app = docker.build("getintodevops/hellonode")
-        app = docker.build("anuj-saxena-git/DockerExample")
+        app = docker.build("anuj-saxena-git")
         
         
       //  sh 'app = docker.build("getintodevops/hellonode") '
